@@ -175,7 +175,8 @@ class CustomLearner(Learner):
                 self.train_dataset, 
                 batch_size=self.batch_size, 
                 shuffle=True, 
-                num_workers=self.num_workers
+                num_workers=self.num_workers,
+                drop_last=True
             )
 
         if self.valid_dataset is None or self.valid_loader is None:
@@ -187,7 +188,8 @@ class CustomLearner(Learner):
                 self.valid_dataset,
                 batch_size=self.batch_size,
                 shuffle=False,
-                num_workers=self.num_workers
+                num_workers=self.num_workers,
+                drop_last=True
             )
 
     def finalize(self, fl_ctx: FLContext):

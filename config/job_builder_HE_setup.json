@@ -1,8 +1,8 @@
 {
-    "job_name": "test1.1_HE_alpha5.0",
+    "job_name": "test1.1_HE_16",
     "num_rounds": 10,
     "aggregation_epochs": 10,
     "min_clients": 2,
-    "batch_size": 64,
+    "batch_size": 16,
     "learning_rate": 0.0007
 }

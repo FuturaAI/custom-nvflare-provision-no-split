@@ -1,5 +1,5 @@
 {
-    "job_name": "test1.1_alpha5.0",
+    "job_name": "test1.1",
     "num_rounds": 5,
     "aggregation_epochs": 5,
     "min_clients": 2,
