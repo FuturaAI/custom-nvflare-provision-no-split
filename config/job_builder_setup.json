@@ -1,7 +1,5 @@
 {
     "job_name": "test1.1_alpha5.0",
-    "train_split_root": "/tmp/custom_splits/custom_fedavg_1234",
-    "alpha": 5.0,
     "num_rounds": 5,
     "aggregation_epochs": 5,
     "min_clients": 2,

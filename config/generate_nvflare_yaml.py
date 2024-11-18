@@ -20,7 +20,7 @@ def create_nvidia_flare_project_config(project_name: str):
     config = {
         'api_version': 3,
         'name': project_name,
-        'description': 'NVIDIA FLARE sample project for cifar10 custom',
+        'description': 'NVIDIA FLARE sample project',
         'participants': [
             {
                 'name': 'overseer.example.com',
