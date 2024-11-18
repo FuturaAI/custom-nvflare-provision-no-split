@@ -1,0 +1,2 @@
+Cartella contenente "split_images" per eseguire i notebooks.
+Il codice è modificabile a piacimento come la gestione dei path per le folders.

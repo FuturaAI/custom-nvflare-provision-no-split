@@ -1,0 +1,1 @@
+Cartella default contenente modelli encrypted e descrypted.

@@ -1,0 +1,10 @@
+{
+    "job_name": "test1.1_HE_alpha5.0",
+    "train_split_root": "/tmp/custom_splits/custom_fedavg_1234",
+    "alpha": 5.0,
+    "num_rounds": 10,
+    "aggregation_epochs": 10,
+    "min_clients": 2,
+    "batch_size": 64,
+    "learning_rate": 0.0007
+}
