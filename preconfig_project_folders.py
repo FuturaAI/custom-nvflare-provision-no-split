@@ -2,8 +2,9 @@ import os
 import sys
 import json
 import glob
-from config.generate_image_dataset import split_dataset
+from config.generate_image_dataset import split_dataset, split_sites
 import time
+import shutil
 
 def find_latest_prod_dir(project_name):
     workspace_path = os.path.join("workspace", project_name)
@@ -57,13 +58,20 @@ def main():
     update_and_rename_resources_file(project_name, prod_dir, "site-1")
     update_and_rename_resources_file(project_name, prod_dir, "site-2")
     
-    split_images_output_dir_server = wait_for_path(project_name, prod_dir, "localhost")
     split_images_output_dir_site1 = wait_for_path(project_name, prod_dir, "site-1")
     split_images_output_dir_site2 = wait_for_path(project_name, prod_dir, "site-2")
 
-    split_dataset('images', split_images_output_dir_server)
-    split_dataset('images', split_images_output_dir_site1)
-    split_dataset('images', split_images_output_dir_site2)
+    # First split data between sites
+    site_folders = split_sites("images", num_sites=2)
+    
+    # Then split each site's data into train/val/test
+    split_dataset(site_folders[0], split_images_output_dir_site1)
+    split_dataset(site_folders[1], split_images_output_dir_site2)
+
+    # Clean up temporary site folders
+    for folder in site_folders:
+        if os.path.exists(folder):
+            shutil.rmtree(folder)
 
 if __name__ == "__main__":
     main()
