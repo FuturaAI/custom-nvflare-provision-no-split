@@ -40,7 +40,7 @@ if [ ! -d "$PROD_DIR" ]; then
 fi
 
 # Array dei siti da lanciare
-SITES=("localhost" "site-1" "site-2")
+SITES=("server1" "site-1" "site-2")
 
 # Lancia tutti i server con un ritardo di 7 secondi tra loro
 for site in "${SITES[@]}"; do

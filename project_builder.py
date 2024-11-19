@@ -18,7 +18,7 @@ def get_project_name_interactive():
         
     return project_name
 
-def wait_for_path(project_name, site_path):  # site_path like "localhost" or "site-1" or "site-2"
+def wait_for_path(project_name, site_path):  # site_path like "server1" or "site-1" or "site-2"
     base_path = os.path.join("workspace", project_name, "prod_00", site_path, "local")
     timeout = 10  # 10 seconds
     start_time = time.time()

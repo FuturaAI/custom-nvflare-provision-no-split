@@ -23,15 +23,7 @@ def create_nvidia_flare_project_config(project_name: str):
         'description': 'NVIDIA FLARE sample project',
         'participants': [
             {
-                'name': 'overseer.example.com',
-                'type': 'overseer',
-                'org': 'nvidia',
-                'protocol': 'https',
-                'api_root': '/api/v1',
-                'port': 8443
-            },
-            {
-                'name': 'localhost',
+                'name': 'server1',
                 'type': 'server',
                 'org': 'nvidia',
                 'fed_learn_port': 8002,
@@ -72,7 +64,7 @@ def create_nvidia_flare_project_config(project_name: str):
                         'path': 'nvflare.ha.dummy_overseer_agent.DummyOverseerAgent',
                         'overseer_exists': False,
                         'args': {
-                            'sp_end_point': 'localhost:8002:8003',
+                            'sp_end_point': 'server1:8002:8003',
                             'heartbeat_interval': 6
                         }
                     }
