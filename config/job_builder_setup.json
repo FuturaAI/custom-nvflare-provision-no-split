@@ -1,5 +1,5 @@
 {
-    "job_name": "test1.4_20_20",
+    "job_name": "test1.35_20_20",
     "num_rounds": 20,
     "aggregation_epochs": 20,
     "min_clients": 2,
