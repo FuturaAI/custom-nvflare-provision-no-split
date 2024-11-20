@@ -1,8 +1,8 @@
 {
-    "job_name": "test1.3",
-    "num_rounds": 10,
-    "aggregation_epochs": 10,
+    "job_name": "test1.4_20_20",
+    "num_rounds": 20,
+    "aggregation_epochs": 20,
     "min_clients": 2,
-    "batch_size": 16,
+    "batch_size": 32,
     "learning_rate": 0.0007
 }

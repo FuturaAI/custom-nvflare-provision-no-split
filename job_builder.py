@@ -60,14 +60,14 @@ cross_site_eval = CrossSiteModelEval(
 server_app.add_workflow("cross_site_model_eval", cross_site_eval)
 
 client_app = ClientAppConfig()
-pneumonia_learner = CustomLearner(
+custom_learner = CustomLearner(
     aggregation_epochs=AGGREGATION_EPOCHS,
     lr=LR,
     batch_size=BATCH_SIZE
 )
-client_app.add_component("pneumonia_learner", pneumonia_learner)
+client_app.add_component("custom_learner", custom_learner)
 
-learner_executor = LearnerExecutor(learner_id="pneumonia_learner")
+learner_executor = LearnerExecutor(learner_id="custom_learner")
 client_app.add_executor(tasks=["train", "submit_model", "validate"], executor=learner_executor)
 
 fed_app = FedAppConfig(server_app=server_app, client_app=client_app)
