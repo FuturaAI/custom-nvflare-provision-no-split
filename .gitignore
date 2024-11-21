@@ -13,3 +13,7 @@ split_images/
 *.zip
 
 api_keys.json
+
+.env
+
+downloads/

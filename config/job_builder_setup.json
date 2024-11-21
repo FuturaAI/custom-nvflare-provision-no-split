@@ -1,7 +1,7 @@
 {
-    "job_name": "test1.35_20_20",
-    "num_rounds": 20,
-    "aggregation_epochs": 20,
+    "job_name": "test1.35_ez",
+    "num_rounds": 3,
+    "aggregation_epochs": 3,
     "min_clients": 2,
     "batch_size": 32,
     "learning_rate": 0.0007
